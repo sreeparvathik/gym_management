@@ -2,8 +2,8 @@
   <form>
     <md-card>
       <md-card-header :data-background-color="dataBackgroundColor">
-        <h4 class="title">Update Client</h4>
-        <p class="category">Update existing client</p>
+        <h4 class="title">Add Client</h4>
+        <p class="category">Add a new client</p>
       </md-card-header>
 
       <md-card-content>
@@ -17,7 +17,7 @@
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Phone Number</label>
-              <md-input v-model="phonenumber" type="tel"></md-input>
+              <md-input v-model="username" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
@@ -29,13 +29,13 @@
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Date Of Birth</label>
-              <md-input v-model="dob" type="text"></md-input>
+              <md-input v-model="firstname" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-50">
             <md-field>
               <label>Postal Code</label>
-              <md-input v-model="pin" type="text"></md-input>
+              <md-input v-model="lastname" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-100">
@@ -47,23 +47,23 @@
           <div class="md-layout-item md-small-size-100 md-size-3">
             <md-field>
               <label>Emergency Person Name</label>
-              <md-input v-model="emergency_name" type="text"></md-input>
+              <md-input v-model="city" type="text"></md-input>
             </md-field>
           </div><div class="md-layout-item md-small-size-100 md-size-33">
             <md-field>
               <label>Emergency Person Relation</label>
-              <md-input v-model="emergency_relation" type="text"></md-input>
+              <md-input v-model="city" type="text"></md-input>
             </md-field>
           </div>
           <div class="md-layout-item md-small-size-100 md-size-33">
             <md-field>
               <label>Emergency Person contact</label>
-              <md-input v-model="emergency_contact" type="text"></md-input>
+              <md-input v-model="country" type="text"></md-input>
             </md-field>
           </div>
           
           <div class="md-layout-item md-size-100 text-right">
-            <md-button class="md-raised md-success">Update Client</md-button>
+            <md-button class="md-raised md-success">Add Client</md-button>
           </div>
         </div>
       </md-card-content>
@@ -72,7 +72,7 @@
 </template>
 <script>
 export default {
-  name: "add-profile-form",
+  name: "edit-profile-form",
   props: {
     dataBackgroundColor: {
       type: String,
@@ -81,16 +81,15 @@ export default {
   },
   data() {
     return {
-      username: "Gary",
-      phonenumber: "0001234123",
+      username: null,
       disabled: null,
-      emailadress: "asdf@gmail.com",
-      dob: "22-08-1999",
-      pin: "685344",
-      address: "Kochi, Kerala",
-      emergency_name: "Harry",
-      emergency_relation: "Sister",
-      emergency_contact: "00001234124",
+      emailadress: null,
+      lastname: null,
+      firstname: null,
+      address: null,
+      city: null,
+      country: null,
+      code: null,
       aboutme:
         "Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.",
     };

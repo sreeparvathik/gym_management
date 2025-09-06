@@ -1,7 +1,8 @@
 import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 
 import Dashboard from "@/pages/Dashboard.vue";
-import UserProfile from "@/pages/UserProfile.vue";
+import ClientManagement from "@/pages/ClientManagement.vue";
+import AddClientPayment from "@/pages/AddClientPayment.vue";
 import TableList from "@/pages/TableList.vue";
 import Typography from "@/pages/Typography.vue";
 import Icons from "@/pages/Icons.vue";
@@ -22,8 +23,13 @@ const routes = [
       },
       {
         path: "user",
-        name: "User Profile",
-        component: UserProfile,
+        name: "Client Management",
+        component: ClientManagement,
+      },
+      {
+        path: "payment",
+        name: "Client Payment",
+        component: AddClientPayment,
       },
       {
         path: "table",

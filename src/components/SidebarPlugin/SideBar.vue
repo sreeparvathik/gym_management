@@ -13,7 +13,7 @@
       </a>
 
       <a
-        href="https://www.creative-tim.com/product/vue-material-dashboard"
+        href="https://www.instagram.com/d_10_fitness_club?igsh=MW81cWRsdng1YXhvbA=="
         target="_blank"
         class="simple-text logo-normal"
       >
@@ -47,7 +47,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Vue MD",
+      default: "D 10 Fitness",
     },
     sidebarBackgroundImage: {
       type: String,

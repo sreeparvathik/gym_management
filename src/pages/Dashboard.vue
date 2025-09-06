@@ -32,6 +32,33 @@
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
       >
         <chart-card
+          :chart-data="dailySalesChart.data"
+          :chart-options="dailySalesChart.options"
+          :chart-type="'Line'"
+          data-background-color="green"
+        >
+          <template slot="content">
+            <h4 class="title">Monthly Sales</h4>
+            <p class="category">
+              <span class="text-success"
+                ><i class="fas fa-long-arrow-alt-up"></i> 55%
+              </span>
+              increase in today sales.
+            </p>
+          </template>
+
+          <template slot="footer">
+            <div class="stats">
+              <md-icon>access_time</md-icon>
+              updated 4 minutes ago
+            </div>
+          </template>
+        </chart-card>
+      </div>
+      <!-- <div
+        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
+      >
+        <chart-card
           :chart-data="emailsSubscriptionChart.data"
           :chart-options="emailsSubscriptionChart.options"
           :chart-responsive-options="emailsSubscriptionChart.responsiveOptions"
@@ -72,18 +99,39 @@
             </div>
           </template>
         </chart-card>
-      </div>
+      </div> -->
       <div
         class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
       >
         <stats-card data-background-color="green">
           <template slot="header">
-            <md-icon>store</md-icon>
+            <md-icon>face</md-icon>
           </template>
 
           <template slot="content">
-            <p class="category">Revenue</p>
-            <h3 class="title">$34,245</h3>
+            <p class="category">Total Clients</p>
+            <h3 class="title">2233</h3>
+          </template>
+
+          <template slot="footer">
+            <div class="stats">
+              <md-icon>date_range</md-icon>
+              Last 24 Hours
+            </div>
+          </template>
+        </stats-card>
+      </div>
+      <div
+        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
+      >
+        <stats-card data-background-color="blue">
+          <template slot="header">
+            <md-icon>face</md-icon>
+          </template>
+
+          <template slot="content">
+            <p class="category">Active Clients</p>
+            <h3 class="title">2200</h3>
           </template>
 
           <template slot="footer">
@@ -99,26 +147,26 @@
       >
         <stats-card data-background-color="orange">
           <template slot="header">
-            <md-icon>content_copy</md-icon>
+            <md-icon>face</md-icon>
           </template>
 
           <template slot="content">
-            <p class="category">Used Space</p>
+            <p class="category">PT Clients</p>
             <h3 class="title">
-              49/50
-              <small>GB</small>
+              1000
+              <!-- <small>GB</small> -->
             </h3>
           </template>
 
           <template slot="footer">
             <div class="stats">
-              <md-icon class="text-danger">warning</md-icon>
-              <a href="#pablo">Get More Space...</a>
+              <!-- <md-icon class="text-danger">warning</md-icon> -->
+              <!-- <a href="#pablo">Get More Space...</a> -->
             </div>
           </template>
         </stats-card>
       </div>
-      <div
+      <!-- <div
         class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
       >
         <stats-card data-background-color="red">
@@ -159,7 +207,7 @@
             </div>
           </template>
         </stats-card>
-      </div>
+      </div> -->
       <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
       >
@@ -173,7 +221,7 @@
           </md-card-content>
         </md-card>
       </div>
-      <div
+      <!-- <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
       >
         <nav-tabs-card>
@@ -194,7 +242,7 @@
             </md-tabs>
           </template>
         </nav-tabs-card>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -203,8 +251,8 @@
 import {
   StatsCard,
   ChartCard,
-  NavTabsCard,
-  NavTabsTable,
+  // NavTabsCard,
+  // NavTabsTable,
   OrderedTable,
 } from "@/components";
 
@@ -212,8 +260,8 @@ export default {
   components: {
     StatsCard,
     ChartCard,
-    NavTabsCard,
-    NavTabsTable,
+    // NavTabsCard,
+    // NavTabsTable,
     OrderedTable,
   },
   data() {
